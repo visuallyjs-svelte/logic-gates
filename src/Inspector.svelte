@@ -1,5 +1,5 @@
 <script lang="ts">
-import { InspectorComponent } from "@visuallyjs/browser-ui-svelte"
+import { InspectorComponent, ShapePropertiesInspector } from "@visuallyjs/browser-ui-svelte"
 import { isNode, type Base } from "@visuallyjs/browser-ui"
 
 let current = $state<Base | null>(null)
@@ -15,6 +15,7 @@ let current = $state<Base | null>(null)
 					<input type="text" vjs-att="label" placeholder="Label"/>
 				</div>
 			</div>
+			<ShapePropertiesInspector vertex={current}/>
 		</div>
 	{/if}
 </InspectorComponent>
