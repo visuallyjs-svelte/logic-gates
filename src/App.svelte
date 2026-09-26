@@ -20,7 +20,11 @@
         <div class="vjs-palette-wrapper">
             <DiagramPaletteComponent showLabels={true}
                                      iconSize={{width:120,height:120}}
-                                     autoEdgeConnect={true}/>
+                                     allowDropOnEdge={true}
+                                     autoEdgeConnect={{
+                                       enabled:true,
+                                       connectMode:"eager"
+                                   }}/>
         </div>
         <DiagramComponent style="flex-grow:1" options={diagramOptions} {url}/>
         <div class="vjs-lg-controls">
